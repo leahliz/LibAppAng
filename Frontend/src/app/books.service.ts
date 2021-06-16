@@ -9,18 +9,18 @@ export class BooksService {
   constructor(private http:HttpClient) { }
 
   getBooks(){
-    return this.http.get("http://localhost:3000/books");
+    return this.http.get("http://3.108.170.40:3000/books");
   }
 
   getAuthors(){
-    return this.http.get("http://localhost:3000/authors");
+    return this.http.get("http://3.108.170.40:3000/authors");
   }
   newBook(item:any){
-    return this.http.post<any>("http://localhost:3000/addbook",{"book":item})
+    return this.http.post<any>("http://3.108.170.40:3000/addbook",{"book":item})
     .subscribe(data=>{console.log(data)});
   }
   newAuthor(item:any){
-    return this.http.post<any>("http://localhost:3000/addauthor",{"author":item})
+    return this.http.post<any>("http://3.108.170.40:3000/addauthor",{"author":item})
     .subscribe(data=>{console.log(data)}); 
   }
 }
