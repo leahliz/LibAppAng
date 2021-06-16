@@ -9,10 +9,10 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
   loginUser(user:any){
-    return this.http.post<any>("http://localhost:3000/login",user)
+    return this.http.post<any>("http://3.108.170.40:3000/login",user)
   }
   signup(user:any){
-    return this.http.post<any>("http://localhost:3000/signup",{"user":user})
+    return this.http.post<any>("http://3.108.170.40:3000/signup",{"user":user})
   }
   loggedIn(){
     return !!localStorage.getItem("token");
